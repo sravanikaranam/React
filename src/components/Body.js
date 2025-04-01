@@ -1,6 +1,6 @@
  import {useState,useEffect} from "react";
  import RestaurantCard from"./RestaurantCard";
-; 
+import Shimmer from "./Shimmer.js";
  const Body=()=>{
     const [ListOfRescards,setListOfRescards]=useState([]);
     const [ListOfFilterRescards,setListOfFilterRescards]=useState([]);
@@ -14,11 +14,11 @@
            setListOfFilterRescards(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         }
     
-    return(
+    return ListOfRescards.length==0?<Shimmer/>:(
         <div>
             <div  className="flex">
                 <div className="p-2 m-2">
-                    <input type="text"  value={searchText}
+                    <input  className=" border-s-black" type="text"  value={searchText}
                     onChange= {(e)=>{
                         setSearchText(e.target.value)}}>
                     </input>
