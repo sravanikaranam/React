@@ -1,0 +1,2 @@
+ export const IMG_LOGO="https://marketplace.canva.com/EAFaFUz4aKo/2/0/800w/canva-yellow-abstract-cooking-fire-free-logo-iY2pBFWGLgU.jpg";
+ export const CDN_IMG="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
